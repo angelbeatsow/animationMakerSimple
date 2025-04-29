@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>アニメメーカー</h1>
+  <hr />
+  <div>
+    ★キャンバスサイズ★ <br>
+    横<input type="number" id="canvasSizeInputW" max="1000"  min="0" step="1" value="64"/>px,
+    高さ<input type="number" id="canvasSizeInputH" max="1000"  min="0" step="1" value="128"/>px
+    <button id="canvasSizeChangeButton">変更</button>
+  </div>
+  <hr>
+  ★プレビュー★ <br>
+  フレームレート <input type="range" id="frameRateInput" value="0.25" step="0.05" max="1.00" min="0.01" /> <span id="frameRateSpan">0.25</span>秒/frame <br>
+  <button id="prevewButton" onclick="prevew()">開始/停止</button> <br />
+  <canvas id="prevewCanvas">
+    
+  </canvas>
+  <hr>
+  ★画像保存★ <br>
+  <input type="number" id="hozonNumberInput">番目の画像を保存 <button onclick="dl1()">ダウンロード</button>
+  <hr>
+  ★キャンバス表示設定★ <br>
+  前後の描画を透かして表示 <input type="range"  id="sukashiInput" value="0" max="2"min="0"step="1"/>前後 <span id="sukashiSpan">0</span>枚
+  <hr>
+  <div>
+    ★ブラシ設定★ <br>
+    <button id="drawModeButton" style="background: gray;">鉛筆</button> 
+    <input type="range" id="drawRangeInput" min="1" max="10" step="1" value="1" />
+    <span id="drawRangeSpan">1</span>px
+    <br>
+    <button id="keshigomuModeButton">消しゴム</button>
+    <input type="range" id="keshigomuRangeInput" min="1" max="10" step="1" value="1" />
+    <span id="keshigomuRangeSpan">1</span>px
+  </div>
+  <hr />
+  <div >
+    ★キャンバス★ <br>
+    <button id="addCanvasButton0" onclick="addCanvas(event)" value="0">→追加</button>
+    <div id="canvasDiv" style="position: relative;">
+      
+    </div>
+
+
+  </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
