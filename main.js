@@ -74,9 +74,8 @@ function prevew(){
     return;
   }
   let _imgDatas = [];
-  for (var i = 0; i < junban.length; i++) {
-    if(junban[i] == null)continue;
-    let _data = canvases[junban[i] -1].ctx.getImageData(0,0,width,height);
+  for (var i = 0; i < canvases.length; i++) {
+    let _data = canvases[i].ctx.getImageData(0,0,width,height);
     _imgDatas.push(_data);
   }
   if(_imgDatas.length == 0)return;
