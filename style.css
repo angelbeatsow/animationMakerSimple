@@ -1,0 +1,14 @@
+body {
+    font-size: 15pt;
+    background: #ddd;
+    color: #222;
+}
+
+button{
+    margin: 10px;
+}
+
+canvas{
+    margin: 20px;
+    border: 2px double #666;
+}
